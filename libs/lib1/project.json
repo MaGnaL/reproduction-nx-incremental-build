@@ -1,0 +1,26 @@
+{
+  "name": "lib1",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/lib1/src",
+  "prefix": "lib",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/lib1/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/lib1/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/lib1/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    }
+  }
+}

@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@latest-ws/lib1": ["libs/lib1/src/index.ts"],
+      "@latest-ws/lib1/sub1": ["libs/lib1/sub1/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
